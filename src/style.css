@@ -1,6 +1,11 @@
 *{
     margin: 0px;
     padding: 0px;
+    color: white;
+}
+
+body{
+    background: #032F3D;
 }
 
 .title{
@@ -31,9 +36,28 @@
     margin: -1rem;
 }
 
+.info {
+    font-size: 14px;
+    padding: 1rem 2rem 1rem;
+    line-height: 1.2;
+    text-align: left;
+    width: 700px;
+    border-bottom: .0625rem solid #dadce0;
+    margin-top: 0;
+    margin-bottom: 27px;
+    color: #222;
+    overflow: hidden;
+    margin: -1rem;
+}
+
 iframe{
+    position: fixed;
+    left: 50%;
+    top: 5%;
     overflow: hidden;
 }
+
+
 
 .author{
     font-size: 16px;

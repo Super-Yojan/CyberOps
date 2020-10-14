@@ -14,7 +14,7 @@ $.get(url, function(data){
         var author = "<h3 class='author'>" + element.author + "</h3>";
         var article = "<p class='description'>" + element.description + "</p>";
         var container = "<div class='newscontainer'>" + heading + author + article + "</div>";
-        $("body").prepend(container);
+        $("body").append(container);
     });
     //console.log(data);
 })
