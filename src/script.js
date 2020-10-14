@@ -12,8 +12,9 @@ $.get(url, function(data){
     data.articles.forEach(element => {
         var heading = "<h1 class='title'>" + element.title+"</h1>";
         var author = "<h3 class='author'>" + element.author + "</h3>";
-        var article = "<p>" + element.description + "</p>";
-        $("body").prepend(heading, author, article, "<hr>");
+        var article = "<p class='description'>" + element.description + "</p>";
+        var container = "<div class='newscontainer'>" + heading + author + article + "</div>";
+        $("body").prepend(container);
     });
     //console.log(data);
 })
