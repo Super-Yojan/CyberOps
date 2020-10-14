@@ -4,7 +4,31 @@
 }
 
 .title{
-    
+    line-height: 1;
+    padding: 10px 0px 10px 0px;
+    font-size: 20px;
+}
+
+.description {
+    letter-spacing: .025em;
+    font-family: Roboto,Arial,sans-serif;
+    font-weight: 500;
+    padding-top: 5px;
+    line-height: 1rem;
+}
+
+.newscontainer {
+    font-size: 14px;
+    padding: 1rem 2rem 1rem;
+    line-height: 1.2;
+    text-align: left;
+    width: 700px;
+    border-bottom: .0625rem solid #dadce0;
+    margin-top: 0;
+    margin-bottom: 27px;
+    color: #222;
+    overflow: hidden;
+    margin: -1rem;
 }
 
 iframe{
@@ -14,4 +38,8 @@ iframe{
 .author{
     font-size: 16px;
     color: gray;
+    line-height: 1.25rem;
+    letter-spacing: .01785714em;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-size: 0.875rem;
 }
