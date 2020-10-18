@@ -7,13 +7,15 @@ var from = ""+ d.getFullYear()+ "-"+ d.getMonth()+ "-"+ d.getDate();
 var to = ""+ d.getFullYear()+ "-"+ month+ "-"+ d.getDate();
 console.log(from)
 var url = "https://newsapi.org/v2/everything?q=cyber&from="+from +"&to="+to+ "&apiKey=" + API_KEY
-
-$.get(url, function(data){
+var gnews = "https://gnews.io/api/v4/search?q=cyber&token=c27c7c82ca00d67cb075ab68b6741e9f&lang=en&country=us"
+$.get(gnews, function(data){
     data.articles.forEach(element => {
-        var heading = "<h1 class='title'>" + element.title+"</h1>";
-        var author = "<h3 class='author'>" + element.author + "</h3>";
-        var article = "<p class='description'>" + element.description + "</p>";
-        var container = "<div class='newscontainer'>" + heading + author + article + "</div>";
+        var heading = "<h5 class='card-title'>" + element.title+"</h1>";
+        var author = "<h6 class='card-subtitle mb-2 text-muted'>" + element.source.name + "</h3>";
+        var article = "<p class='card-text'>" + element.description + "</p>";
+        var link = "<a href='"+element.url+"' target='_blank'>Learn More</a>"
+        //var image = "<img scr='"+element.image+"' class='card-img-top' alt='...'>"
+        var container = "<div class='card mb-3' style='width: 700px;'> "+"<div class='card-body'>" + heading + author + article + link+"</div></div>";
         $("body").append(container);
     });
     //console.log(data);
